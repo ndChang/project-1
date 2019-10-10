@@ -16,6 +16,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Must reflect how you plan to implement the "creative spin"
 - Must include all pages you plan to build
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
+- Use a [color generator](https://mycolor.space) for your colors
 - When designing your XD mockup, don't forget the project requirements listed below
 
 **Project Approval Due Date:** 10/28/19 by 9am
