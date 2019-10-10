@@ -39,6 +39,8 @@ Your task is to build a minimal version of an existing website (with a creative 
 
 - https://foursquare.com
 - https://www.nike.com
+- https://www.airbnb.com
+- https://stripe.com
 - https://www.etsy.com
 - https://www.moma.org
 - https://www.nytimes.com
