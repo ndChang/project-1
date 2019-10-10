@@ -18,13 +18,19 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 
 ### Requirements
 
-- Must be deployed on either [GitHub Pages](https://pages.github.com) or [Surge](https://surge.sh/)
-- Must use flexbox
-- Must include a minimum of 2 event handlers
-- Must include a minimum of 2 css animations
-- Must look like your XD mockup (or better)
+**Your project must:**
+
+- Be deployed on either [GitHub Pages](https://pages.github.com) or [Surge](https://surge.sh/)
+- Use flexbox
+- Include a minimum of 2 event handlers
+- Include a minimum of 2 css animations
+- Look like your XD mockup (or better)
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
 - Use a [color generator](https://mycolor.space) for your colors
+- Be properly indented and spaced
+- Not include commented out code in the `master` branch
+- Use camelCase for javascript code
+- Include a *beautiful*, professional **README.md** (use [markdown](https://guides.github.com/features/mastering-markdown/))
 
 ### Tips
 
