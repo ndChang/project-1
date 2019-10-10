@@ -44,7 +44,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Deploy early (day one or two) and often (everytime you implement a new feature)
 - Use high resolution images (do not skew images, when resizing, resize proportionately)
 - Make it look professional (this is for you to showcase to employers)
-- Every day walk around GA for 10min and approach a few members of our community asking if they have 5min to give you feedback on your website
+- During project week, walk around GA and ask individuals if they have 5min to give you feedback on your website
 - During this project week get feedback from one UX student on your website
 - Research what you consider the best websites out there to get ideas/inspiration
 
