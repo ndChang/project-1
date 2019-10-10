@@ -21,7 +21,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 
 **Project Approval Due Date:** 10/28/19 by 9am
 
-### Project Requirements
+### Project Requirements (MVP)
 
 **Your project must:**
 
@@ -42,6 +42,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 ### Tips
 
 - Deploy early (day one or two) and often (everytime you implement a new feature)
+- Implement all project requirements first before moving on to post-mvp features
 - Use high resolution images (do not skew images, when resizing, resize proportionately)
 - Make it look professional (this is for you to showcase to employers)
 - During project week, walk around GA and ask individuals if they have 5min to give you feedback on your website
