@@ -30,8 +30,6 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Include a minimum of 2 event handlers
 - Include a minimum of 2 css animations
 - Look like your XD mockup (or better)
-- Use https://loremipsum.io/generator (do not use real website's assets or text)
-- Use a [color generator](https://mycolor.space) for your colors
 - Be properly indented and spaced
 - Not include commented out code in the `master` branch
 - Use camelCase for javascript code
