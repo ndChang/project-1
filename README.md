@@ -4,7 +4,7 @@
 
 ## Task
 
-Your task is to build a minimal version of an existing website *(with a creative spin)*
+Your task is to build a minimal version of an existing website (*with a creative spin*)
 
 ### For Project Approval
 
