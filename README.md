@@ -32,6 +32,8 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Use camelCase for javascript code
 - Include a *beautiful*, professional **README.md** (use [markdown](https://guides.github.com/features/mastering-markdown/))
 
+### Due Date: 11/1/19 by 1pm
+
 ### Tips
 
 - Deploy early (day one or two) and often (everytime you implement a new feature)
