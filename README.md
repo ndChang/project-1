@@ -2,13 +2,13 @@
 
 # Project 1
 
-**Task:** 
+## Task
 
 Your task is to build a minimal version of an existing website (with a creative spin)
 
-**For Project Approval**
+### For Project Approval
 
-Adobe XD mockup of the design you plan to build
+**Adobe XD mockup of the design you plan to build**
 - Must include **desktop** and **mobile** view (breakpoint at 420px)
 - Must be as detailed as possible and look professional
 - Must reflect how you plan to implement the "creative spin"
@@ -16,7 +16,7 @@ Adobe XD mockup of the design you plan to build
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
 - When designing your XD mockup, don't forget the project requirements listed below
 
-**Requirements**
+### Requirements
 
 - Must be deployed on either [GitHub Pages](https://pages.github.com) or [Surge](https://surge.sh/)
 - Must use flexbox
@@ -26,7 +26,7 @@ Adobe XD mockup of the design you plan to build
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
 - Use a [color generator](https://mycolor.space) for your colors
 
-**Tips**
+### Tips
 
 - Deploy early (day one or two) and often (everytime you implement a new feature)
 - Use high resolution images (do not adjust height, only width if you want to resize)
