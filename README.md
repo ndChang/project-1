@@ -16,7 +16,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
 - When designing your XD mockup, don't forget the project requirements listed below
 
-### Requirements
+### Project Requirements
 
 **Your project must:**
 
@@ -32,7 +32,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Use camelCase for javascript code
 - Include a *beautiful*, professional **README.md** (use [markdown](https://guides.github.com/features/mastering-markdown/))
 
-### Due Date: 11/1/19 by 1pm
+### Project Due Date: 11/1/19 by 1pm
 
 ### Tips
 
