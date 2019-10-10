@@ -24,10 +24,10 @@ Your task is to build a minimal version of an existing website (with a creative 
 - Must include a minimum of 2 css animations
 - Must look like your XD mockup (or better)
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
+- Use a [color generator](https://mycolor.space) for your colors
 
 **Tips**
 
-- Use a [color generator](https://mycolor.space)
 - Deploy early (day one or two) and often (everytime you implement a new feature)
 - Use high resolution images (do not adjust height, only width if you want to resize)
 - Make it look professional (this is for you to showcase to employers)
