@@ -8,10 +8,10 @@ Your task is to build a minimal version of an existing website (with a creative 
 
 **For Project Approval**
 
-- **Adobe XD mockup of the design you plan to build**
+Adobe XD mockup of the design you plan to build
 - Must include **desktop** and **mobile** view (breakpoint at 420px)
 - Must be as detailed as possible and look professional
-- Must include a "creative spin"
+- Must reflect how you plan to implement the "creative spin"
 - Must include all pages you plan to build
 - Use https://loremipsum.io/generator (do not use real website's assets or text)
 - When designing your XD mockup, don't forget the project requirements listed below
