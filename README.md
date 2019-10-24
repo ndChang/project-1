@@ -45,6 +45,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Add a search bar on your webpage and use filter() method
 - Add the ability to sort on your webpage e.g. ascending, descending
 - Add a filter to your webpage e.g. by color, by size, by etc
+- Add toggle for dark-mode
 
 ### Tips
 
