@@ -27,6 +27,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 
 - Be deployed on either [GitHub Pages](https://pages.github.com) or [Surge](https://surge.sh/)
 - Use flexbox
+- Include a minimum of 2 pages
 - Include a minimum of 2 event handlers
 - Include a minimum of 2 css animations
 - Look like your XD mockup (or better)
@@ -37,12 +38,20 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 
 **Project Due Date:** 11/1/19 by 1pm
 
+### Post-MVP Ideas
+
+- Add a contact form
+- Build a [carousel](https://getbootstrap.com/docs/4.0/components/carousel/#with-controls) from scratch
+- Add a search bar on your webpage and use filter() method
+- Add the ability to sort on your webpage e.g. ascending, descending
+- Add a filter to your webpage e.g. by color, by size, by etc
+
 ### Tips
 
 - Deploy early (day one or two) and often (everytime you implement a new feature)
 - Implement all project requirements first before moving on to post-mvp features
 - Use high resolution images (do not skew images, when resizing, resize proportionately)
-- Make it look professional (this is for you to showcase to employers)
+- Make it look professional (this is for you to showcase - it could land you a job)
 - During project week, walk around GA and ask individuals if they have 5min to give you feedback on your website
 - During this project week get feedback from one UX student on your website
 - Research what you consider the best websites out there to get ideas/inspiration
