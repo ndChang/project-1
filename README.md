@@ -46,6 +46,7 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - Add the ability to sort on your webpage e.g. ascending, descending
 - Add a filter to your webpage e.g. by color, by size, by etc
 - Add toggle for dark-mode
+- Create an [alert that can be dismissed](https://getbootstrap.com/docs/4.3/components/alerts/#dismissing)
 
 ### Tips
 
