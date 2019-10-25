@@ -68,3 +68,5 @@ Your task is to build a **minimal** version of an existing website (*with a crea
 - https://www.moma.org
 - https://www.nytimes.com
 - https://www.mint.com
+- https://www.popeyes.com
+- https://www.bk.com/menu/burgers
