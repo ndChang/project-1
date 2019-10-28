@@ -19,8 +19,8 @@
 
 /* Card */
 .card img {
-  width: 50vw;
-  height: 200px;
+  width: 100vw;
+  height: 400px;
 }
 .card{
   flex-direction: column;
