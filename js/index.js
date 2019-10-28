@@ -1,12 +1,12 @@
-const carouselSlide = document.querySelector(".listing-container");
-const carouselImages = document.querySelectorAll(".listing-container .card");
+const carouselSlide = document.querySelector(".carousel-container");
+const carouselImages = document.querySelectorAll(".carousel-slider .card");
 
 //Button
 const prevBtn = document.querySelector(".previous");
 const nextBtn = document.querySelector(".next");
 
 //counter
-let counter = 0;
+let counter = 1;
 const size = carouselImages[0].clientWidth;
 const shift = -size * counter;
 

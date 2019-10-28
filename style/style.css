@@ -5,6 +5,30 @@
   /* border: 1px solid black; */
 }
 
+/* General Styling */
+.wrapper{
+  display: flex;
+}
+
+/* Nav bar */
+.search-bar img{
+  height: 50px;
+  width: 50px;
+  padding: 10px
+  
+}
+.nav {
+  justify-content: space-between;
+}
+.menu li{
+  list-style: none;
+  display: none;
+}
+.menu menu{
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
 
 /* Carousel */
 .carousel-container {
@@ -21,16 +45,36 @@
 .card img {
   width: 100vw;
   height: 400px;
+  padding: 0 0 1vh 0;
 }
 .card{
   flex-direction: column;
 }
-.wrapper{
-  display: flex;
+.reservation{
+  margin: 2vh;
+  justify-content: space-between;
+}
+.description{
+  font-size: 1.5em;
+}
+.description h3{
+  font-size: 2em;
+  margin-bottom: 2vh;
 }
 
 /* Button */
 .bookBtn{
-  padding: 5px 15px;
-  
+  padding: 2px 20px;
+  color:white;
+  background: orange;
+}
+
+/* Keyframes */
+@keyframes orbit {
+  0% {
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
 }
