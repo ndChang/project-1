@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+
+/* Carousel */
+.carousel-container {
+  width: 100%;
+}
+
+.carousel-slider {
+  overflow: scroll;
+  width: 100%;
+}
+
+
+/* Card */
+.card img {
+  width: 50vw;
+  height: 200px;
+}
+.card{
+  flex-direction: column;
+}
+.wrapper{
+  display: flex;
+}
+
+/* Button */
+.bookBtn{
+  padding: 5px 15px;
+  
+}
