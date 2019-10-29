@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* General Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* border: 1px solid black; */
+  font-family: "Raleway";
 }
 
-/* General Styling */
 .wrapper {
   display: flex;
 }
@@ -13,7 +16,7 @@
 .landing-page {
   flex-direction: column;
 }
-.landing-page .hero{
+.landing-page .hero {
   display: none;
 }
 
@@ -99,6 +102,14 @@
 /* Laptop */
 
 @media (min-width: 1020px) {
+  /* 
+
+
+  Landing Page/Home Page
+  
+  
+  */
+
   /* Carousel */
   .carousel-container {
     margin: 5vh auto;
@@ -129,6 +140,9 @@
     flex-direction: column;
   }
   /* Menu Dropdown */
+  .menu .wrapper{
+    flex-direction: row-reverse;
+  }
   .menu li {
     display: block;
     padding: 20px 15px;
@@ -145,7 +159,7 @@
     background-position: 0%;
     background-size: cover;
   }
-  .landing-page .hero{
+  .landing-page .hero {
     display: block;
   }
   .search-bar {
@@ -180,7 +194,7 @@
   }
   .hero .bookBtn {
     padding: 10px 20px;
-    border-radius:5px;
+    border-radius: 5px;
     align-content: flex-end;
   }
 
@@ -188,29 +202,53 @@
     display: none;
   }
 
-  .hero .confirmation{
+  .hero .confirmation {
     justify-content: flex-end;
   }
 
   /* Video Banner */
-  .new-content{
+  .new-content {
     width: 90vw;
     height: 60vh;
     margin: 20px auto;
     border-radius: 5px;
     background: url(../ezgif.com-gif-maker.gif) no-repeat;
     background-size: cover;
-    background-position:center ;
+    background-position: center;
     flex-direction: column;
     justify-content: center;
   }
-  .new-content *{
+  .new-content * {
     margin-left: 30px;
     color: white;
     font-weight: 500;
   }
-  .new-content .bookBtn{
+  .new-content .bookBtn {
     width: 150px;
     border: none;
+  }
+
+  /* 
+  
+  Log-in Page
+  
+  */
+
+  .container.log-in {
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero.log-in {
+    height: fit-content;
+  }
+
+  form .confirmation .log-in-check {
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+  }
+  form .confirmation .log-in-check .new-user {
+    font-size: 12px;
   }
 }
