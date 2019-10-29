@@ -7,8 +7,8 @@ const nextBtn = document.querySelector(".next");
 
 //counter
 let counter = 1;
-const size = carouselImages[0].clientWidth;
-const shift = -size * counter;
+// const size = carouselImages[0].clientWidth;
+// const shift = -size * counter;
 
 // carouselSlide.style.transform = "translateX(" + shift + "px)";
 
@@ -39,3 +39,33 @@ const shift = -size * counter;
 //     carouselSlide.style.transform = "translateX(" + -size * counter + "px)"
 // }
 // transitioncards();
+
+
+
+
+//////////////////////////////////////////////////
+////////////////////Login functionality///////////
+//////////////////////////////////////////////////
+
+
+const username = document.querySelectorAll('input')[0].value
+const password = document.querySelectorAll("input")[1].value
+const loginButton = document.querySelectorAll("button")[0]
+
+const loginCheck = (event)=> {
+    event.preventDefault();
+    if(username == ""){
+        return
+    }else if(password == ""){
+        return
+    }else{
+        console.log("fired")
+    }
+}
+
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log("fired")
+})
+
+

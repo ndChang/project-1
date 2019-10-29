@@ -198,10 +198,6 @@
     align-content: flex-end;
   }
 
-  .hero .submit-btn {
-    display: none;
-  }
-
   .hero .confirmation {
     justify-content: flex-end;
   }
