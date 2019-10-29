@@ -13,6 +13,9 @@
 .landing-page {
   flex-direction: column;
 }
+.landing-page .hero{
+  display: none;
+}
 
 /* Nav bar */
 .search-bar img {
@@ -87,6 +90,7 @@
 
 /* Larger phones/Tablets */
 @media (min-width: 500px) {
+  /* Card */
   .card {
     margin-right: 40px;
   }
@@ -95,10 +99,12 @@
 /* Laptop */
 
 @media (min-width: 1020px) {
+  /* Carousel */
   .carousel-container {
     margin: 5vh auto;
     width: 100vw;
   }
+  /* Cards */
   .card {
     flex-direction: row;
     border: 1px solid #707070;
@@ -122,6 +128,7 @@
     padding: 0;
     flex-direction: column;
   }
+  /* Menu Dropdown */
   .menu li {
     display: block;
     padding: 20px 15px;
@@ -131,11 +138,15 @@
   menu {
     display: none;
   }
+  /* Landing Page */
   .landing-page {
     height: 100vh;
     background: url("../images/beach-bora-bora-calm-753626.jpg") no-repeat;
     background-position: 0%;
     background-size: cover;
+  }
+  .landing-page .hero{
+    display: block;
   }
   .search-bar {
     transform: scale(1.3);
@@ -179,5 +190,27 @@
 
   .hero .confirmation{
     justify-content: flex-end;
+  }
+
+  /* Video Banner */
+  .new-content{
+    width: 90vw;
+    height: 60vh;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: url(../ezgif.com-gif-maker.gif) no-repeat;
+    background-size: cover;
+    background-position:center ;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .new-content *{
+    margin-left: 30px;
+    color: white;
+    font-weight: 500;
+  }
+  .new-content .bookBtn{
+    width: 150px;
+    border: none;
   }
 }
