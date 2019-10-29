@@ -1,71 +1,79 @@
-const carouselSlide = document.querySelector(".carousel-container");
-const carouselImages = document.querySelectorAll(".carousel-slider .card");
-
-//Button
-const prevBtn = document.querySelector(".previous");
-const nextBtn = document.querySelector(".next");
-
-//counter
-let counter = 1;
-// const size = carouselImages[0].clientWidth;
-// const shift = -size * counter;
-
-// carouselSlide.style.transform = "translateX(" + shift + "px)";
-
-/////////////////////////////////////////////
-/////////////Event Listeners////////////////
-///////////////////////////////////////////
-
-//Event check on buttons to transition to next slide
-//If new slide is last of array, slide will reset to first element... Only works when both first and last element are the same
-
-// nextBtn.addEventListener("click", () => {
-//   if (counter >= carouselImages.length - 1) return;
-//   carouselSlide.style.transition = "transfrom 0.4s ease-in-out";
-//   counter++;
-//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-// });
-
-// prevBtn.addEventListener("click", () => {
-//   if (counter <= 0) return;
-//   carouselSlide.style.transition = "transfrom 0.4s ease-in-out";
-//   counter--;
-//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-// });
-
-// function transitioncards() {
-//     carouselSlide.style.transition = "transfrom 0.4s ease-in-out";
-//     counter++;
-//     carouselSlide.style.transform = "translateX(" + -size * counter + "px)"
-// }
-// transitioncards();
-
-
-
-
+function onReady() {
 //////////////////////////////////////////////////
 ////////////////////Login functionality///////////
 //////////////////////////////////////////////////
 
+const loginButton = document.querySelectorAll(".login-submit")[0];
 
-const username = document.querySelectorAll('input')[0].value
-const password = document.querySelectorAll("input")[1].value
-const loginButton = document.querySelectorAll("button")[0]
+// const loginCheck = event => {
+//   console.log("fired");
+//   const username = document.querySelectorAll("input")[0].value;
+//   const password = document.querySelectorAll("input")[1].value;
+//   event.preventDefault();
+//   if (username == "") {
+//     console.log("check username");
+//   } else if (password == "") {
+//     console.log("check username");
+//   } else {
+//     location.replace("index.html");
+//   }
+// };
 
-const loginCheck = (event)=> {
-    event.preventDefault();
-    if(username == ""){
-        return
-    }else if(password == ""){
-        return
-    }else{
-        console.log("fired")
-    }
+// loginButton.addEventListener("click", loginCheck);
+
+//Array for photos
+const photos = [];
+
+//Array for locations
+const locations = [
+  "Australia",
+  "Hawaii",
+  "Guam",
+  "Costa Rica",
+  "Spain",
+  "Neatherlands",
+  "Germany",
+  "Madagascar",
+  "Greece",
+  "Panama",
+  "Chile",
+  "South Korea",
+  "Japan",
+  "India",
+  "South Africa",
+  "United States"
+];
+//Scan through image folder && populates photos array
+for (let i = 2; i <= 15; i++) {
+  let image = document.createElement("img");
+  image.setAttribute("src", `../images/${i}.jpg`);
+  photos.push(image);
 }
 
-loginButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log("fired")
-})
+//Two Coloumn selector
+const twoColumnRow = document.querySelectorAll(".wrapper")[31];
 
+//Populate Two Column
+const cardGenerator = function(location, index) {
+  let card = document.createElement("div");
+  card.classList.add("wrapper", "card", "small-location");
+  card.appendChild(photos[index]);
+  let locationName = document.createElement("h4");
+  locationName.innerHTML = locations[index];
+  card.appendChild(locationName);
+  let price = document.createElement("h4");
+  price.innerHTML = `$${priceGenerator()}/night`
+  price.style.color ="green"
+  card.appendChild(price)
+  location.appendChild(card);
+};
 
+//Random Number Generator
+const priceGenerator = () => {return Math.random().toFixed(2) * 100 +30};
+
+for (let i = 0; i < photos.length; i++) {
+  cardGenerator(twoColumnRow, i);
+}
+
+}
+onReady()

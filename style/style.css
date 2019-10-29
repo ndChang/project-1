@@ -8,7 +8,9 @@
   /* border: 1px solid black; */
   font-family: "Raleway";
 }
-
+.off-center{
+  margin: 32px;
+}
 .wrapper {
   display: flex;
 }
@@ -74,6 +76,7 @@
 /* Button */
 .bookBtn {
   padding: 2px 20px;
+  border:  none;
   color: white;
   background: orange;
   border-radius: 5px;
@@ -102,6 +105,9 @@
 /* Laptop */
 
 @media (min-width: 1020px) {
+
+
+
   /* 
 
 
@@ -112,8 +118,23 @@
 
   /* Carousel */
   .carousel-container {
-    margin: 5vh auto;
-    width: 100vw;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  .wrapper.exploration{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .wrapper.exploration{
+    margin-top: 40px;
+  }
+  .carousel-container.reduced-size{
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .exploration{
+    justify-content: space-between;
   }
   /* Cards */
   .card {
@@ -127,6 +148,9 @@
   }
   .card .description {
     display: none;
+  }
+  .card.small-location{
+    flex-direction: column;
   }
   .card .reservation {
     flex-direction: column;
@@ -169,8 +193,10 @@
   /* Hero Section/Form */
   .hero {
     margin: 15px 40px;
-    height: 50vh;
-    width: 25vw;
+    min-height: 50vh;
+    max-height: 70vh;
+    min-width: 568px;
+    max-width: 25vw;
     flex-direction: column;
     color: rgb(80, 80, 80);
     background: rgba(255, 255, 255, 0.9);
@@ -179,7 +205,6 @@
   }
   .hero input {
     width: 100%;
-    border-radius: 3px;
     /* font-size: 30px; */
   }
   .hero .check-in {
@@ -194,6 +219,7 @@
   }
   .hero .bookBtn {
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     align-content: flex-end;
   }
@@ -201,10 +227,12 @@
   .hero .confirmation {
     justify-content: flex-end;
   }
-
+  .hero .confirmation button{
+    border: none;
+  }
   /* Video Banner */
   .new-content {
-    width: 90vw;
+    width: 80vw;
     height: 60vh;
     margin: 20px auto;
     border-radius: 5px;
@@ -219,7 +247,15 @@
     color: white;
     font-weight: 500;
   }
+  .new-content h3{
+    font-weight: 900;
+  }
+  .new-content h3, h4{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
   .new-content .bookBtn {
+    padding: 10px;
     width: 150px;
     border: none;
   }
