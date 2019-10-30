@@ -7,9 +7,7 @@
   box-sizing: border-box;
   /* border: 1px solid black; */
   font-family: "Raleway";
-}
-.off-center{
-  margin: 32px;
+  text-size-adjust: 100%;
 }
 .wrapper {
   display: flex;
@@ -96,9 +94,18 @@
 
 /* Larger phones/Tablets */
 @media (min-width: 500px) {
+  /* General */
+  .off-center{
+    margin: 32px;
+    justify-content: space-between;
+  }
+  
   /* Card */
   .card {
     margin-right: 40px;
+  }
+  .card.large-food{
+    margin-bottom: 40px;
   }
 }
 
@@ -136,14 +143,18 @@
   .exploration{
     justify-content: space-between;
   }
+  .food-container{
+    width: 50vw;
+  }
   /* Cards */
   .card {
     flex-direction: row;
-    border: 1px solid #707070;
+
   }
   .card img {
+    min-width: 200px;
     max-width: fit-content;
-    width: 200px;
+    width: 220px;
     height: 20vh;
   }
   .card .description {
@@ -151,6 +162,30 @@
   }
   .card.small-location{
     flex-direction: column;
+    min-width: fit-content;
+    min-height: fit-content;
+    max-height: 650px;
+    padding-bottom: 15px;
+  }
+  .card.small-location img{
+    min-width: 485px;
+    min-height: 500px;
+  }
+  .card.large-food{
+    display: block;
+    min-width: 50%;
+  }
+  .wrapper.card.large-food{
+    min-height: 300px;
+    max-height: 800px;
+    margin:40px 0;
+  }
+  .card.large-food img{
+    min-width: 100%;
+    height: 400px;
+    image-rendering: optimizeQuality;
+    object-fit: cover;
+    object-position: center;
   }
   .card .reservation {
     flex-direction: column;
@@ -193,9 +228,9 @@
   /* Hero Section/Form */
   .hero {
     margin: 15px 40px;
-    min-height: 50vh;
-    max-height: 70vh;
-    min-width: 568px;
+    min-height: 370px;
+    max-height: 50vh;
+    min-width: 370px;
     max-width: 25vw;
     flex-direction: column;
     color: rgb(80, 80, 80);
@@ -237,8 +272,8 @@
     margin: 20px auto;
     border-radius: 5px;
     background: url(../ezgif.com-gif-maker.gif) no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: right;
     flex-direction: column;
     justify-content: center;
   }
