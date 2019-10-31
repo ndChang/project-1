@@ -14,7 +14,7 @@ function onLoad(getLocalValue) {
   signUp.addEventListener("click", () => {
     location.replace("sign-up.html");
   });
-
+  
   const id = getLocalValue;
   document.querySelector("title").innerText = localStorage.id;
   const destination = document.querySelector(".container");
@@ -69,6 +69,28 @@ function onLoad(getLocalValue) {
 
     destination.appendChild(div);
   };
+  const buildFoodPage = function(name) {
+    let div = document.createElement("div");
+    div.classList.add("wrapper", "card", "hero", "redirect");
+    div.style.flexDirection = "column"
+    let heading = document.createElement("h3");
+    let image = document.createElement("img");
+    let informationPrice = document.createElement("p");
+    let informationListing = document.createElement("p")
+    informationListing.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt, veritatis dolore repudiandae ab nemo. Unde, nesciunt nemo minus, totam incidunt aliquid, deserunt commodi libero molestias quod iste ratione ut."
+    informationPrice.innerHTML = name.price;
+    informationPrice.style.color = "green";
+    image.setAttribute("src", `../images/food/${index + 2 }.jpg`);
+    div.append(image);
+    heading.innerText = name.id;
+    heading.style.color = "black";
+    div.appendChild(heading);
+    div.appendChild(informationPrice);
+    div.appendChild(informationListing)
+
+    destination.appendChild(div);
+  };
+  buildFoodPage(id)
   buildWebpage(id);
 }
 onLoad(localStorage);

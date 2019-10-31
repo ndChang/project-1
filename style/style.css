@@ -122,6 +122,14 @@
 
 }
 
+#dummy {
+  flex-direction:column-reverse;
+}
+#dummy .card {
+  margin-bottom: 4vh;
+  border-bottom: 1px solid lightgray;
+}
+
 /* Keyframes */
 @keyframes orbit {
   0% {
@@ -415,4 +423,8 @@
     height: 40vh;
     width: 40vw;
   }
+  #dummy {
+    flex-direction: row;;
+  }
+
 }

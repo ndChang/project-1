@@ -218,5 +218,24 @@ function onReady() {
   //   }
   // };
   // widgetMaker("state", 8, "small-location");
+
+
+
+  const scrollToTop = function(){
+    let button = document.createElement("button")
+    button.classList.add("btn")
+    button.style.background = "url('../images/up-arrow.png')"
+    button.style.backgroundPosition = "center"
+    button.style.position = "fixed"
+    button.style.bottom = 0;
+    button.style.height = "40px";
+    button.style.right = 0;
+    button.style.border = "4px solid black"
+    button.addEventListener("click", () => {
+        window.scrollTo(0,0)
+    })
+    document.body.append(button)
+  }
+  scrollToTop()
 }
 onReady();
