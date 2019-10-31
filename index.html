@@ -14,10 +14,10 @@
           <img src="images/icon.svg" />
         </div>
         <div class="menu">
-          <menu>Menu</menu>
+          <menu>Menu <img id="burger" src="images/menu.png"></menu>
           <ul class="wrapper">
-            <li class="menu-list-item">Login</li>
-            <li class="menu-list-item">Sign up</li>
+            <li class="menu-list-item" id="login">Login</li>
+            <li class="menu-list-item" id="sign-up"> Sign up</li>
             <li class="menu-list-item">Help</li>
             <!-- <li class="menu-list-item">Host a bungalow</li> -->
           </ul>
@@ -26,25 +26,25 @@
 
       <div class="wrapper hero">
         <form>
-          <h2>Check in here from date to date</h2>
-          <h4>Where</h4>
+          <h2>For fun in the sun book your next bungalow today</h2>
+          <h5>Where</h5>
           <input type="" placeholder="Insert a location" />
 
           <div class="wrapper dates">
             <div class="wrapper check-in">
-              <h4>
+              <h5>
                 Check-in
-              </h4>
+              </h5>
               <input type="date" placeholder="From when" />
             </div>
             <div class="wrapper check-in">
-              <h4>
+              <h5>
                 Check-out
-              </h4>
+              </h5>
               <input type="date" placeholder="to When" />
             </div>
           </div>
-          <h4>Guests</h4>
+          <h5>Guests</h5>
           <input type="number" placeholder="number of Guests" />
           <div class="wrapper confirmation">
             <button class="bookBtn">Search</button>
@@ -57,19 +57,19 @@
       <h3 class="scroll-indicator">Scroll >></h3>
     </div>
     <div class="carousel-container">
-      <div class="wrapper carousel-slider">
+      <div class="wrapper carousel-slider prototype">
         <div class="wrapper card">
           <img src="images/7.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
             </div>
             <button class="bookBtn">Book</button>
           </div>
-          <div class=" reservation description">
-            <h3>listing</h3>
+          <div class="reservation description">
+            <h4>listing (expand)</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -95,7 +95,7 @@
         <div class="wrapper card">
           <img src="images/2.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
@@ -103,7 +103,7 @@
             <button class="bookBtn">Book</button>
           </div>
           <div class=" reservation description">
-            <h3>listing</h3>
+            <h4>listing</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -129,7 +129,7 @@
         <div class="wrapper card">
           <img src="images/3.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
@@ -137,7 +137,7 @@
             <button class="bookBtn">Book</button>
           </div>
           <div class=" reservation description">
-            <h3>listing</h3>
+            <h4>listing</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -163,7 +163,7 @@
         <div class="wrapper card">
           <img src="images/4.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
@@ -171,7 +171,7 @@
             <button class="bookBtn">Book</button>
           </div>
           <div class=" reservation description">
-            <h3>listing</h3>
+            <h4>listing<h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -197,7 +197,7 @@
         <div class="wrapper card">
           <img src="images/5.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
@@ -205,7 +205,7 @@
             <button class="bookBtn">Book</button>
           </div>
           <div class=" reservation description">
-            <h3>listing</h3>
+            <h4>listing</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -231,7 +231,7 @@
         <div class="wrapper card">
           <img src="images/6.jpg" />
           <div class="wrapper reservation">
-            <div class="wrapper card host-information">
+            <div class="wrapper host-information">
               <span class="occupancy">ENTIRE BUNGALOW</span>
               <span class="rating">Rating 4.76</span>
               <span class="price">$76/night</span>
@@ -239,7 +239,7 @@
             <button class="bookBtn">Book</button>
           </div>
           <div class=" reservation description">
-            <h3>listing</h3>
+            <h4>listing</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
               necessitatibus non odit, recusandae fuga quibusdam nostrum, quas
@@ -272,10 +272,13 @@
 
     <div class="wrapper exploration off-center">
       <h2>Browse By Country</h2>
-      <h3 class="scroll-indicator">Scroll >></h3>
+      <div class="wrapper">
+      <button class="previous btn">Previous</button>
+      <button class="next btn">Next</button>
+      </div>  
     </div>
     <div
-      class="wrapper food-experience carousel-container off-center reduced-size"
+      class="wrapper carousel-container reduced-size"
     >
       <div class="wrapper carousel-slider reduced-size"></div>
     </div>
@@ -286,7 +289,7 @@
     <div
       class="carousel-container food-container"
     >
-      <div class="carousel-slider reduced-size"></div>
+      <div class="carousel-slider wrapper reduced-size" id="twoColumn"></div>
     </div>
     <script src="js/index.js"></script>
   </body>
