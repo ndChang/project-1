@@ -29,7 +29,7 @@ function onReady() {
       (this.photo = photo),
       (this.price = price),
       (this.food = food),
-      (this.text = text)
+      (this.text = text);
   };
   //Random Number Generator
   const priceGenerator = () => {
@@ -38,15 +38,11 @@ function onReady() {
 
   //Scan through image folder && populates photos array
   for (let i = 2; i <= 15; i++) {
-    let image = document.createElement("img");
-    image.setAttribute("src", `../images/${i}.jpg`);
-    photos.push(image);
+    photos.push(`../images/${i}.jpg`);
   }
 
   for (let i = 0; i < 13; i++) {
-    let image = document.createElement("img");
-    image.setAttribute("src", `../images/food/${i}.jpg`);
-    foods.push(image);
+    foods.push(`../images/food/${i}.jpg`);
   }
 
   //Create object
@@ -64,13 +60,51 @@ function onReady() {
   //Two Coloumn selector
   const twoColumnRow = document.querySelectorAll(".carousel-slider")[1];
   const foodColumn = document.querySelectorAll(".carousel-slider")[2];
+  //Carousol generator
 
+  const prototypeGenerator = function(location, bungalows, index, key) {
+    let card = document.createElement("div");
+    card.classList.add("wrapper", "card");
+    let image = bungalows[index][key];
+    card.append(image);
+
+    let hostInformation = document.createElement("div");
+    hostInformation.classList.add("wrapper", "reservation");
+    let roomInformation = document.createElement("div");
+    roomInformation.classList.add("wrapper", "reservation");
+    let occupancy = document.createElement("span");
+    occupancy.classList.add("occupancy");
+    occupancy.innerText = "ENTIRE BUNGALOW";
+    roomInformation.append(occupancy);
+    let rating = document.createElement("span");
+    rating.classList.add("rating");
+    rating.innerHTML = "Rating 4.76";
+    roomInformation.append(rating);
+
+    // PRICE
+    hostInformation.append(roomInformation);
+    let confirmation = document.createElement("button");
+    confirmation.classList.add("bookBtn");
+    confirmation.innerHTML = "Book";
+    hostInformation.append(confirmation);
+    card.append(hostInformation);
+    let writeUp = document.createElement("div");
+    location.append(card);
+  };
+  // for (let i = 0; i < 6; i++) {
+  //   const location = document.querySelectorAll(".carousel-slider")[0];
+  //   console.log(location);
+  //   prototypeGenerator(location, bungalows, i, "photo");
+  // }
   //Populate Two Column
   const cardGenerator = function(location, bungalows, index, key, className) {
     let card = document.createElement("div");
     card.classList.add("wrapper", "card", className);
-    let image = bungalows[index][key];
-    image.style.display = "block";
+
+    let image = document.createElement("img")
+    image.setAttribute("src", bungalows[index][key])
+    // bungalows[index][key];
+    // image.style.display = "block";
     card.appendChild(image);
     let locationName = document.createElement("h4");
     locationName.innerHTML = bungalows[index].name;
@@ -92,15 +126,20 @@ function onReady() {
     footer.style.background = "black";
     // document.body.appendChild(footer)
   };
-    for (let i = 0; i < photos.length - 1; i++) {
-      cardGenerator(twoColumnRow, bungalows, i, "photo", "small-location");
-    }
 
+  for(let i = 0; i < 6; i++){
+    cardGenerator(document.querySelectorAll(".carousel-slider")[0], bungalows,i,"photo")
+    console.log(bungalows[0])
 
+  }
   for (let i = 0; i < 6; i++) {
     cardGenerator(foodColumn, bungalows, i, "food", "large-food");
   }
 
+  for (let i = 0; i < photos.length - 1; i++) {
+    console.log(photos);
+    cardGenerator(twoColumnRow, bungalows, i, "photo", "small-location");
+  }
   footerGenerator();
 
   // Event Handler
@@ -163,7 +202,7 @@ function onReady() {
     userData[i].addEventListener("click", () => {
       myStorage.setItem("id", userData[i].children[1].innerHTML);
       myStorage.setItem("price", userData[i].children[2].innerText);
-      location.replace("dummy.html")
+      location.replace("dummy.html");
     });
   }
 
@@ -219,23 +258,21 @@ function onReady() {
   // };
   // widgetMaker("state", 8, "small-location");
 
-
-
-  const scrollToTop = function(){
-    let button = document.createElement("button")
-    button.classList.add("btn")
-    button.style.background = "url('../images/up-arrow.png')"
-    button.style.backgroundPosition = "center"
-    button.style.position = "fixed"
+  const scrollToTop = function() {
+    let button = document.createElement("button");
+    button.classList.add("btn");
+    button.style.background = "url('../images/up-arrow.png')";
+    button.style.backgroundPosition = "center";
+    button.style.position = "fixed";
     button.style.bottom = 0;
     button.style.height = "40px";
     button.style.right = 0;
-    button.style.border = "4px solid black"
+    button.style.border = "4px solid black";
     button.addEventListener("click", () => {
-        window.scrollTo(0,0)
-    })
-    document.body.append(button)
-  }
-  scrollToTop()
+      window.scrollTo(0, 0);
+    });
+    document.body.append(button);
+  };
+  scrollToTop();
 }
 onReady();

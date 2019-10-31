@@ -80,7 +80,7 @@ function onLoad(getLocalValue) {
     informationListing.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt, veritatis dolore repudiandae ab nemo. Unde, nesciunt nemo minus, totam incidunt aliquid, deserunt commodi libero molestias quod iste ratione ut."
     informationPrice.innerHTML = name.price;
     informationPrice.style.color = "green";
-    image.setAttribute("src", `../images/food/${index + 2 }.jpg`);
+    image.setAttribute("src", `../images/food/${index}.jpg`);
     div.append(image);
     heading.innerText = name.id;
     heading.style.color = "black";
