@@ -28,6 +28,9 @@
 .landing-page .hero {
   display: none;
 }
+.landing-page .hero.redirect{
+  display: block;
+}
 
 /* Nav bar */
 .search-bar img {
@@ -343,11 +346,12 @@
   .new-content {
     display: flex;
     width: 80vw;
+    max-width: 1800px;
     height: 300px;
     margin: 20px auto;
     border-radius: 5px;
-    background: url(../ezgif.com-gif-maker.gif) no-repeat;
-    background-size: contain;
+    background: url(../ezgif.com-video-to-gif.gif) no-repeat;
+    background-size: cover;
     background-position: right;
     flex-direction: column;
     justify-content: center;
@@ -400,5 +404,15 @@
   /* On Load */
   #log-in{
     animation: topslide 2s 1;
+  }
+
+
+  /* Redirect */
+  .redirect img{
+    width: 100%;
+  }
+  .redirect{
+    height: 40vh;
+    width: 40vw;
   }
 }
