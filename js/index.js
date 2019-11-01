@@ -224,11 +224,16 @@ formSearch.addEventListener("submit", (event) => {
     event.preventDefault()
     let userInput = document.querySelectorAll("form")[0].children[2].value
     let stayDuration = document.querySelectorAll("input")[2].valueAsDate - document.querySelectorAll("input")[1].valueAsDate
+    stayDuration/=1000
+    stayDuration/=24
+    stayDuration/=60
+    stayDuration/=60
+    stayDuration = Math.round(stayDuration)
     let guests =document.querySelectorAll("input")[3].valueAsNumber
     if(locations.includes(userInput)){
       let searchResult = bungalows[locations.indexOf(userInput)].name
       let searchPrice = bungalows[locations.indexOf(userInput)].price
-      alert(`On average your trip to ${searchResult} will cost ${searchPrice}`)
+      alert(`On average your trip to ${searchResult} will cost ${searchPrice} during your stay of ${stayDuration} days for ${guests + 1} people`)
     }
   })
 
