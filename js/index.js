@@ -24,6 +24,7 @@ function onReady() {
     "South Africa",
     "United States"
   ];
+
   const Bungalow = function(name, photo, price, food, text) {
     (this.name = name),
       (this.photo = photo),
@@ -65,11 +66,13 @@ function onReady() {
   const prototypeGenerator = function(location, bungalows, index, key) {
     let card = document.createElement("div");
     card.classList.add("wrapper", "card");
-    let image = bungalows[index][key];
+
+    let image = document.createElement("img");
+    image.setAttribute("src", bungalows[index][key]);
     card.append(image);
 
     let hostInformation = document.createElement("div");
-    hostInformation.classList.add("wrapper", "reservation");
+    hostInformation.classList.add("wrapper", "space");
     let roomInformation = document.createElement("div");
     roomInformation.classList.add("wrapper", "reservation");
     let occupancy = document.createElement("span");
@@ -82,6 +85,11 @@ function onReady() {
     roomInformation.append(rating);
 
     // PRICE
+    let roomPrice = document.createElement("price");
+    roomPrice.classList.add("price");
+    roomPrice.innerHTML = bungalows[index].price;
+    roomPrice.style.color = "green";
+    roomInformation.append(roomPrice);
     hostInformation.append(roomInformation);
     let confirmation = document.createElement("button");
     confirmation.classList.add("bookBtn");
@@ -89,20 +97,20 @@ function onReady() {
     hostInformation.append(confirmation);
     card.append(hostInformation);
     let writeUp = document.createElement("div");
+
     location.append(card);
   };
-  // for (let i = 0; i < 6; i++) {
-  //   const location = document.querySelectorAll(".carousel-slider")[0];
-  //   console.log(location);
-  //   prototypeGenerator(location, bungalows, i, "photo");
-  // }
+  for (let i = 6; i < 13; i++) {
+    const location = document.querySelectorAll(".carousel-slider")[0];
+    prototypeGenerator(location, bungalows, i, "photo");
+  }
   //Populate Two Column
   const cardGenerator = function(location, bungalows, index, key, className) {
     let card = document.createElement("div");
     card.classList.add("wrapper", "card", className);
 
-    let image = document.createElement("img")
-    image.setAttribute("src", bungalows[index][key])
+    let image = document.createElement("img");
+    image.setAttribute("src", bungalows[index][key]);
     // bungalows[index][key];
     // image.style.display = "block";
     card.appendChild(image);
@@ -116,30 +124,73 @@ function onReady() {
     location.appendChild(card);
   };
 
+  for (let i = 0; i < 6; i++) {
+    cardGenerator(foodColumn, bungalows, i, "food", "large-food");
+  }
+
+  for (let i = 0; i < photos.length - 1; i++) {
+    cardGenerator(twoColumnRow, bungalows, i, "photo", "small-location");
+  }
+  
+  cardGenerator(twoColumnRow, bungalows, 0, "photo", "small-location");
   //Footer Generator
+
+
   const footerGenerator = () => {
     let footer = document.createElement("footer");
     footer.style.bottom = 0;
     footer.style.width = "100vw";
     footer.style.height = "200px";
     footer.style.position = "relative";
-    footer.style.background = "black";
-    // document.body.appendChild(footer)
+    footer.style.border = "1px solid black";
+    footer.classList.add("wrapper");
+    footer.style.justifyContent = "space-between";
+
+    let left = document.createElement("div");
+    left.classList.add("wrapper");
+    left.style.flexDirection = "column";
+    left.style.alignItems = "center";
+    left.style.width = "33%";
+    footer.append(left);
+    let leftPara = document.createElement("span");
+    leftPara.style.marginTop = "40px";
+    leftPara.innerText = "Booking begins January 20, 2020";
+    left.append(leftPara);
+    left.append((document.createElement("span").innerText = "Contact"));
+    for (let i = 5; i < 10; i++) {
+      const filler = document.createElement("span");
+      filler.innerHTML = locations[i];
+      left.append(filler);
+    }
+    let center = document.createElement("div");
+    center.classList.add("wrapper");
+    center.style.flexDirection = "column";
+    center.style.alignItems = "center";
+    center.style.justifyContent = "center";
+    center.style.width = "33%";
+    footer.append(center);
+    for (let i = 10; i < locations.length-1; i++) {
+      const filler = document.createElement("span");
+      filler.innerHTML = locations[i];
+      center.append(filler);
+    }
+    footer.append(center);
+
+    let right = document.createElement("div");
+    right.classList.add("wrapper");
+    right.style.flexDirection = "column";
+    right.style.alignItems = "center";
+    right.style.justifyContent =  "center";
+    right.style.width = "33%";
+    footer.append(right);
+    for (let i = 0; i < 5; i++) {
+      const filler = document.createElement("span");
+      filler.innerHTML = locations[i];
+      right.append(filler);
+    }
+    document.body.appendChild(footer);
   };
 
-  for(let i = 0; i < 6; i++){
-    cardGenerator(document.querySelectorAll(".carousel-slider")[0], bungalows,i,"photo")
-    console.log(bungalows[0])
-
-  }
-  for (let i = 0; i < 6; i++) {
-    cardGenerator(foodColumn, bungalows, i, "food", "large-food");
-  }
-
-  for (let i = 0; i < photos.length - 1; i++) {
-    console.log(photos);
-    cardGenerator(twoColumnRow, bungalows, i, "photo", "small-location");
-  }
   footerGenerator();
 
   // Event Handler
@@ -159,7 +210,6 @@ function onReady() {
 
   menu.addEventListener("click", () => {
     userList.classList.toggle("active");
-    console.log(event);
   });
 
   const pTag = document.querySelectorAll(".description");
@@ -168,6 +218,19 @@ function onReady() {
       tag.children[1].classList.toggle("active");
     });
   });
+
+  let formSearch = document.querySelectorAll("form")[0]
+formSearch.addEventListener("submit", (event) => {
+    event.preventDefault()
+    let userInput = document.querySelectorAll("form")[0].children[2].value
+    let stayDuration = document.querySelectorAll("input")[2].valueAsDate - document.querySelectorAll("input")[1].valueAsDate
+    let guests =document.querySelectorAll("input")[3].valueAsNumber
+    if(locations.includes(userInput)){
+      let searchResult = bungalows[locations.indexOf(userInput)].name
+      let searchPrice = bungalows[locations.indexOf(userInput)].price
+      alert(`On average your trip to ${searchResult} will cost ${searchPrice}`)
+    }
+  })
 
   //Carousel
   const carouselSlider = document.querySelectorAll(".carousel-slider")[1];
@@ -179,8 +242,8 @@ function onReady() {
   const size = carouselImages[6].clientWidth + 40;
 
   nextBtn.addEventListener("click", () => {
-    if (counter >= 7) {
-      counter = 1;
+    if (counter > 7) {
+      counter = 0;
     }
     carouselSlider.style.transition = "transfrom 0.4s ease-in-out";
     counter++;
@@ -196,67 +259,29 @@ function onReady() {
     carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
   });
 
-  const userData = document.querySelectorAll(".card");
+  const userData = document
+    .querySelectorAll(".carousel-slider")[1]
+    .querySelectorAll(".card");
 
-  for (let i = 0; i < userData.length - 1; i++) {
+  for (let i = 0; i < userData.length; i++) {
     userData[i].addEventListener("click", () => {
       myStorage.setItem("id", userData[i].children[1].innerHTML);
       myStorage.setItem("price", userData[i].children[2].innerText);
+
       location.replace("dummy.html");
     });
   }
+  const foodData = document
+    .querySelectorAll(".carousel-slider")[2]
+    .querySelectorAll(".card");
 
-  //Widget maker
-  // const widgetMaker = function(name, imageCount, className) {
-  //   const createBanner = function() {
-  //     let divContainer = document.createElement("div");
-  //     divContainer.classList.add("wrapper", "exploration", "off-center");
-  //     let heading = document.createElement("h2");
-  //     heading.innerText = name;
-  //     let buttonContainer = document.createElement("div");
-  //     let btn1 = document.createElement("button");
-  //     btn1.classList.add("prev", "btn");
-  //     btn1.innerText = "Previous";
-  //     let btn2 = document.createElement("button");
-  //     btn2.classList.add("next", "btn");
-  //     btn2.innerText = "Next";
-  //     buttonContainer.append(btn1);
-  //     buttonContainer.appendChild(btn2);
-  //     divContainer.append(heading);
-  //     divContainer.append(buttonContainer);
-  //     document.body.append(divContainer);
-  //   };
-  //   createBanner();
-  //   const createCarousel = function() {
-  //     let carouselContainer = document.createElement("div");
-  //     carouselContainer.classList.add("carousel-container");
-  //     let carouselSlider = document.createElement("div");
-  //     carouselSlider.classList.add("carousel-slider", "wrapper");
-  //     carouselContainer.appendChild(carouselSlider);
-  //     document.body.append(carouselContainer);
-  //   };
-  //   createCarousel();
-  //   let newLocation = document.querySelectorAll(".carousel-slider")[3]
-  //   const cardGenerator = function(location, bungalows, index, key, className) {
-  //     let card = document.createElement("div");
-  //     card.classList.add("wrapper", "card", className);
-  //     let image = bungalows[index][key];
-  //     image.style.display = "block";
-  //     card.appendChild(image);
-  //     let locationName = document.createElement("h4");
-  //     locationName.innerHTML = bungalows[index].name;
-  //     card.appendChild(locationName);
-  //     let prices = document.createElement("p");
-  //     prices.innerHTML = bungalows[index].price;
-  //     prices.style.color = "green";
-  //     card.appendChild(prices);
-  //     location.appendChild(card);
-  //   };
-  //   for (let i = 0; i < imageCount; i++) {
-  //     cardGenerator(newLocation, bungalows, i, "photo", className);
-  //   }
-  // };
-  // widgetMaker("state", 8, "small-location");
+  for (let i = 0; i < foodData.length; i++) {
+    foodData[i].addEventListener("click", () => {
+      myStorage.setItem("id", foodData[i].children[1].innerHTML);
+      myStorage.setItem("price", foodData[i].children[2].innerText);
+      location.replace("dummy.html");
+    });
+  }
 
   const scrollToTop = function() {
     let button = document.createElement("button");

@@ -87,8 +87,11 @@
   flex-direction: column;
 }
 .reservation {
-  margin: 2vh;
+  flex-direction: column;
+}
+.wrapper .space{
   justify-content: space-between;
+  margin: 20px;
 }
 .reservation.description p{
   display: none;
@@ -427,4 +430,16 @@
     flex-direction: row;;
   }
 
+}
+
+@media (max-width:1020px){
+  .btn{
+    display: none;
+  }
+  #press {
+    overflow: scroll;
+  }
+  #twoColumn{
+    overflow: scroll;
+  }
 }
