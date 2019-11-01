@@ -39,11 +39,11 @@ function onReady() {
 
   //Scan through image folder && populates photos array
   for (let i = 2; i <= 15; i++) {
-    photos.push(`../images/${i}.jpg`);
+    photos.push(`./images/${i}.jpg`);
   }
 
   for (let i = 0; i < 13; i++) {
-    foods.push(`../images/food/${i}.jpg`);
+    foods.push(`./images/food/${i}.jpg`);
   }
 
   //Create object
@@ -234,11 +234,11 @@ function onReady() {
     if (locations.includes(userInput)) {
       let searchResult = bungalows[locations.indexOf(userInput)].name;
       let searchPrice = bungalows[locations.indexOf(userInput)].price;
-      console.log(guests)
-      if(guests === NaN){
-        guests = 0
+      console.log(guests);
+      if (guests === NaN) {
+        guests = 0;
       }
-      console.log(guests)
+      console.log(guests);
       alert(
         `On average your trip to ${searchResult} will cost ${searchPrice} during your stay of ${stayDuration} days for ${guests +
           1} people`
@@ -272,13 +272,18 @@ function onReady() {
     counter--;
     carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
   });
-  const bookSelection = document.querySelectorAll(".carousel-slider")[0].querySelectorAll(".card");
-  for (let i = 0; i < bookSelection.length; i++){
-    bookSelection[i].addEventListener("click", (event) => {
-      console.log(event)
-      console.log(bookSelection[i])
-      myStorage.setItem("price", bookSelection[i].children[1].children[0].children[2].innerText)
-    })
+  const bookSelection = document
+    .querySelectorAll(".carousel-slider")[0]
+    .querySelectorAll(".card");
+  for (let i = 0; i < bookSelection.length; i++) {
+    bookSelection[i].addEventListener("click", event => {
+      console.log(event);
+      console.log(bookSelection[i]);
+      myStorage.setItem(
+        "price",
+        bookSelection[i].children[1].children[0].children[2].innerText
+      );
+    });
   }
   const userData = document
     .querySelectorAll(".carousel-slider")[1]
@@ -307,13 +312,13 @@ function onReady() {
   const scrollToTop = function() {
     let button = document.createElement("button");
     button.classList.add("btn");
-    button.style.background = "url('../images/up-arrow.png') no-repeat";
+    button.style.background = "url('./images/up-arrow.png') no-repeat";
     button.style.backgroundPosition = "center";
     button.style.position = "fixed";
     button.style.bottom = 0;
     button.style.height = "40px";
     button.style.right = 0;
-    button.style.border = "1px solid black"; 
+    button.style.border = "1px solid black";
     button.addEventListener("click", () => {
       window.scrollTo(0, 0);
     });
