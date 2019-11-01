@@ -272,7 +272,14 @@ function onReady() {
     counter--;
     carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
   });
-  const bookSelection = document.querySelectorAll(".carousel-slider")[0].querySelectorAll(".card")
+  const bookSelection = document.querySelectorAll(".carousel-slider")[0].querySelectorAll(".card");
+  for (let i = 0; i < bookSelection.length; i++){
+    bookSelection[i].addEventListener("click", (event) => {
+      console.log(event)
+      console.log(bookSelection[i])
+      myStorage.setItem("price", bookSelection[i].children[1].children[0].children[2].innerText)
+    })
+  }
   const userData = document
     .querySelectorAll(".carousel-slider")[1]
     .querySelectorAll(".card");
@@ -300,13 +307,13 @@ function onReady() {
   const scrollToTop = function() {
     let button = document.createElement("button");
     button.classList.add("btn");
-    button.style.background = "url('../images/up-arrow.png')";
+    button.style.background = "url('../images/up-arrow.png') no-repeat";
     button.style.backgroundPosition = "center";
     button.style.position = "fixed";
     button.style.bottom = 0;
     button.style.height = "40px";
     button.style.right = 0;
-    button.style.border = "4px solid black";
+    button.style.border = "1px solid black"; 
     button.addEventListener("click", () => {
       window.scrollTo(0, 0);
     });

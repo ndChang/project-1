@@ -2,4 +2,8 @@ Bungalow and breakfast
 
 Mock airbnb utilzing HTML, CSS, and Javascript.
 
-Currently forms are non functioning. Attempting to utilize local storage to associate keys and values to generate new pages with those values. 
+#Description
+
+Plan your next excursion with Bungalow and breakfast to keep your costs bunga-lowwwww~
+
+![](demo.gif)
