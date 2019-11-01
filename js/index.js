@@ -131,10 +131,9 @@ function onReady() {
   for (let i = 0; i < photos.length - 1; i++) {
     cardGenerator(twoColumnRow, bungalows, i, "photo", "small-location");
   }
-  
+
   cardGenerator(twoColumnRow, bungalows, 0, "photo", "small-location");
   //Footer Generator
-
 
   const footerGenerator = () => {
     let footer = document.createElement("footer");
@@ -169,7 +168,7 @@ function onReady() {
     center.style.justifyContent = "center";
     center.style.width = "33%";
     footer.append(center);
-    for (let i = 10; i < locations.length-1; i++) {
+    for (let i = 10; i < locations.length - 1; i++) {
       const filler = document.createElement("span");
       filler.innerHTML = locations[i];
       center.append(filler);
@@ -180,7 +179,7 @@ function onReady() {
     right.classList.add("wrapper");
     right.style.flexDirection = "column";
     right.style.alignItems = "center";
-    right.style.justifyContent =  "center";
+    right.style.justifyContent = "center";
     right.style.width = "33%";
     footer.append(right);
     for (let i = 0; i < 5; i++) {
@@ -219,23 +218,33 @@ function onReady() {
     });
   });
 
-  let formSearch = document.querySelectorAll("form")[0]
-formSearch.addEventListener("submit", (event) => {
-    event.preventDefault()
-    let userInput = document.querySelectorAll("form")[0].children[2].value
-    let stayDuration = document.querySelectorAll("input")[2].valueAsDate - document.querySelectorAll("input")[1].valueAsDate
-    stayDuration/=1000
-    stayDuration/=24
-    stayDuration/=60
-    stayDuration/=60
-    stayDuration = Math.round(stayDuration)
-    let guests =document.querySelectorAll("input")[3].valueAsNumber
-    if(locations.includes(userInput)){
-      let searchResult = bungalows[locations.indexOf(userInput)].name
-      let searchPrice = bungalows[locations.indexOf(userInput)].price
-      alert(`On average your trip to ${searchResult} will cost ${searchPrice} during your stay of ${stayDuration} days for ${guests + 1} people`)
+  let formSearch = document.querySelectorAll("form")[0];
+  formSearch.addEventListener("submit", event => {
+    event.preventDefault();
+    let userInput = document.querySelectorAll("form")[0].children[2].value;
+    let stayDuration =
+      document.querySelectorAll("input")[2].valueAsDate -
+      document.querySelectorAll("input")[1].valueAsDate;
+    stayDuration /= 1000;
+    stayDuration /= 24;
+    stayDuration /= 60;
+    stayDuration /= 60;
+    stayDuration = Math.round(stayDuration);
+    let guests = document.querySelectorAll("input")[3].valueAsNumber;
+    if (locations.includes(userInput)) {
+      let searchResult = bungalows[locations.indexOf(userInput)].name;
+      let searchPrice = bungalows[locations.indexOf(userInput)].price;
+      console.log(guests)
+      if(guests === NaN){
+        guests = 0
+      }
+      console.log(guests)
+      alert(
+        `On average your trip to ${searchResult} will cost ${searchPrice} during your stay of ${stayDuration} days for ${guests +
+          1} people`
+      );
     }
-  })
+  });
 
   //Carousel
   const carouselSlider = document.querySelectorAll(".carousel-slider")[1];
@@ -263,7 +272,7 @@ formSearch.addEventListener("submit", (event) => {
     counter--;
     carouselSlider.style.transform = "translateX(" + -size * counter + "px)";
   });
-
+  const bookSelection = document.querySelectorAll(".carousel-slider")[0].querySelectorAll(".card")
   const userData = document
     .querySelectorAll(".carousel-slider")[1]
     .querySelectorAll(".card");
